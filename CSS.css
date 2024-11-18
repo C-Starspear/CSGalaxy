@@ -1,0 +1,142 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;  
+    background-image: url('Bilder/bg02.jpg');
+    background-size: auto;
+    font-size: 100%;
+}
+
+.Nebel {
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    color: azure;
+    background-image: url('Bilder/bar01.png');
+    background-size: auto;
+    background-position: center;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index:2;
+    font-family: 'Rowdies', sans-serif;
+    font-size: xx-large;
+    text-transform: uppercase;
+}
+
+.Nebel h2 {
+    margin-top: -7%;
+}
+
+.galaxy {
+    position: absolute;
+    top: -45%;
+    left: -35%;
+    width: 80%;
+    height: 120%;
+    background-image: url('Bilder/galaxy1.png');
+    background-size: cover;
+    background-position: center;
+    animation: rotateGalaxy 5s linear infinite;
+    z-index: 3;
+}
+
+@keyframes rotateGalaxy {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sun {
+    position: fixed;
+    right: -10%;
+    bottom: -30%;
+    width: 40%;
+    height: 70%;
+    background-image: url('Bilder/sun1.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    animation: pulseSun 2s ease-in-out infinite;
+    z-index: 2;
+}
+
+@keyframes pulseSun {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.star-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.star-1 {
+    background-image: url('Bilder/star1.png');
+    width: 10%;
+    height: 20%;
+    bottom: 12%;
+    left: 5%;
+}
+
+.star-2 {
+    background-image: url('Bilder/starred.png');
+    width: 10%;
+    height: 20%;
+    top: 50%;
+    right: 30%;
+}
+
+.star-3 {
+    background-image: url('Bilder/stargreen.png');
+    width: 20%;
+    height: 20%;
+    top: 15%;
+    right: 10%;
+}
+
+.star:hover {
+    transform: scale(1.2);  
+    opacity: 0.8;           
+}
+.spaceship {
+    position: absolute;
+    width: 10%;   
+    height: 20%;  
+    background-image: url('Bilder/raumschiff.png'); 
+    background-size: cover;
+    background-position: center;
+    z-index: 5;
+}
